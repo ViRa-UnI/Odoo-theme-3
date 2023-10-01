@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_module.layout" name="E-commerce Layout">
+        <t t-call="web.layout">
+            <t t-set="head">
+                <link href="/theme_module/static/src/css/theme_styles.css" rel="stylesheet"/>
+                <script src="/theme_module/static/src/js/theme_script.js"></script>
+            </t>
+            <div id="wrapwrap" class="o-wrapwrap o-theme_module">
+                <t t-raw="0"/>
+            </div>
+        </t>
+    </template>
+
+    <template id="theme_module.index" name="E-commerce Home">
+        <t t-call="theme_module.layout">
+            <div id="wrap">
+                <div class="oe_structure" id="oe_structure_theme_module_index_1"/>
+                <section class="s_text_block pt16 pb16">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1>Welcome to our E-commerce Store</h1>
+                                <p>Discover our wide range of products.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_theme_module_index_2"/>
+            </div>
+        </t>
+    </template>
+
+    <template id="theme_module.product" name="E-commerce Product">
+        <t t-call="theme_module.layout">
+            <div id="wrap">
+                <div class="oe_structure" id="oe_structure_theme_module_product_1"/>
+                <section class="s_product_block pt16 pb16">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 t-field="product.name"/>
+                                <p t-field="product.description"/>
+                                <div class="product_price" t-field="product.price"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_theme_module_product_2"/>
+            </div>
+        </t>
+    </template>
+</odoo>

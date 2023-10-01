@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Main layout template for the theme -->
+        <template id="main_layout" name="Main Layout">
+            <t t-call="web.layout">
+                <t t-set="head">
+                    <link href="/theme_module/static/src/css/theme_styles.css" rel="stylesheet"/>
+                    <script src="/theme_module/static/src/js/theme_script.js"></script>
+                </t>
+                <div id="wrap">
+                    <t t-raw="0"/>
+                </div>
+            </t>
+        </template>
+
+        <!-- Home page template -->
+        <template id="home_page" name="Home Page">
+            <t t-call="theme_module.main_layout">
+                <div class="home-page">
+                    <!-- Add your home page content here -->
+                </div>
+            </t>
+        </template>
+
+        <!-- Product page template -->
+        <template id="product_page" name="Product Page">
+            <t t-call="theme_module.main_layout">
+                <div class="product-page">
+                    <!-- Add your product page content here -->
+                </div>
+            </t>
+        </template>
+
+        <!-- Cart page template -->
+        <template id="cart_page" name="Cart Page">
+            <t t-call="theme_module.main_layout">
+                <div class="cart-page">
+                    <!-- Add your cart page content here -->
+                </div>
+            </t>
+        </template>
+
+        <!-- Checkout page template -->
+        <template id="checkout_page" name="Checkout Page">
+            <t t-call="theme_module.main_layout">
+                <div class="checkout-page">
+                    <!-- Add your checkout page content here -->
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
