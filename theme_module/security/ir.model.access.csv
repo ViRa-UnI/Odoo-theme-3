@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_theme_model,theme.model,model_theme_module,base.group_user,1,1,1,1
+access_theme_model_manager,theme.model,model_theme_module,base.group_system,1,1,1,1
